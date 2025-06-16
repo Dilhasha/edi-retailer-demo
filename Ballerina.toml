@@ -1,0 +1,4 @@
+[package]
+org = "dilhasha"
+name = "edi_retailer_demo"
+version = "0.1.0"

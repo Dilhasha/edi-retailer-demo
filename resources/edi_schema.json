@@ -1,0 +1,71 @@
+{
+    "name": "Invoice",
+    "delimiters": {
+        "segment": "~",
+        "field": "*",
+        "component": ":",
+        "repetition": "^"
+    },
+    "segments": [
+        {
+            "code": "HDR",
+            "tag": "header",
+            "fields": [
+                {
+                    "tag": "code",
+                    "required": true
+                },
+                {
+                    "tag": "invoiceId",
+                    "required": true
+                },
+                {
+                    "tag": "orderId",
+                    "required": true
+                },
+                {
+                    "tag": "organization"
+                },
+                {
+                    "tag": "date",
+                    "required": true
+                },
+                {
+                    "tag": "amount",
+                    "dataType": "float",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "code": "ITM",
+            "tag": "items",
+            "maxOccurances": -1,
+            "fields": [
+                {
+                    "tag": "code",
+                    "required": true
+                },
+                {
+                    "tag": "item",
+                    "required": true
+                },
+                {
+                    "tag": "quantity",
+                    "dataType": "int",
+                    "required": true
+                },
+                {
+                    "tag": "unitPrice",
+                    "dataType": "float",
+                    "required": true
+                },
+                {
+                    "tag": "total",
+                    "dataType": "float",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
